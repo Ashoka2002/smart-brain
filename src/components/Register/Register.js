@@ -26,7 +26,7 @@ class Register extends Component {
     } 
 
     onSubmitRegister = ()=>{
-        fetch("http://localhost:3000/register",{
+        fetch("https://smartappserver.onrender.com/register",{
             method:'post',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({
@@ -45,7 +45,7 @@ class Register extends Component {
     }
 
     render() {
-        return <form className="br3 ba dark-gray  mv4 w-100 w-50-m w-25-l mw6 shadow-5 glasmorphin center">
+        return <article className="br3 ba dark-gray  mv4 w-100 w-50-m w-25-l mw6 shadow-5 glasmorphin center">
             <main className="pa4 black-80">
                 <div className="measure">
                     <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
@@ -68,7 +68,7 @@ class Register extends Component {
                     </div>
                 </div>
             </main>
-        </form>
+        </article>
     }
 }
 
