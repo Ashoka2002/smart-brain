@@ -68,14 +68,13 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
     // clarifai-->
-
-    // app.models.predict("face-detection", this.state.input)
+    
     // eslint-disable-next-line
-    fetch("https://smartappserver.onrender.com/imageurl",{
-      method:"post",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({
-        input:this.state.input
+    fetch("https://smartappserver.onrender.com/imageurl", {
+      method: 'post',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        input: this.state.input
       })
     })
     .then(response => response.json())
