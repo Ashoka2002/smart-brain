@@ -38,9 +38,8 @@ class SignIn extends React.Component {
         password: this.state.signInPassword,
       }),
     });
-    Promise.race([fetchPro, this.timeout(60000)])
+    Promise.race([fetchPro, this.timeout(60)])
       .then((response) => {
-        // if(!response.ok) throw new Error
         return response.json();
       })
       .then((user) => {

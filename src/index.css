@@ -1,24 +1,30 @@
 body {
   margin: 0;
-  font-family: 'Courier New', Courier, monospace;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  height: 100vh;
+  width: 100%;
+  font-family: "Courier New", Courier, monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(89deg,#FF5EDF 0%,#04c8De 100%);
+  background: rgb(131, 58, 180);
+  background: linear-gradient(23deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 60%, rgba(252, 176, 69, 1) 100%);
+  overflow: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-.glasmorphin{
+.glasmorphin {
   position: relative;
   background: rgba(255, 255, 255, 0.1);
   height: 400px;
@@ -27,6 +33,6 @@ button{
   justify-content: center;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left:1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
 }
