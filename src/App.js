@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
-import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
 import ParticlesBg from "particles-bg";
@@ -14,7 +13,7 @@ const initialState = {
   input: "",
   imageUrl: "",
   box: {},
-  route: "Sighin",
+  route: "signin",
   isSignIn: false,
   user: {
     id: "",
@@ -111,7 +110,7 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if (route === "sighout") {
-      this.setState({ route: "Sighin" });
+      this.setState({ route: "signin" });
       this.setState(initialState);
       return;
     } else if (route === "home") {
@@ -138,7 +137,7 @@ class App extends Component {
             <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
             <FaceRecognition imageUrl={imageUrl} box={box} />
           </div>
-        ) : route === "Sighin" ? (
+        ) : route === "signin" ? (
           <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
         ) : (
           <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
