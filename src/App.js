@@ -123,7 +123,7 @@ class App extends Component {
     const { isSignIn, imageUrl, route, box } = this.state;
     const { name, entries } = this.state.user;
     return (
-      <div className="App">
+      <div className="App ">
         <LoadingBar color="rgb(255,255,255,0.9)" height={3} transitionTime={520} progress={this.state.progress} />
         <ParticlesBg
           type="random"
